@@ -1,0 +1,125 @@
+parking_lot = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+               
+               
+               
+
+def greeting(car_owner):
+    print("Welcome to MalBay parking")
+    greet = print("Hello " + car_owner )
+    
+    return greet
+    
+    
+    
+    
+def choice_checker_two(response):
+    if(response > 19):
+        print ("invalid")
+
+    
+    
+    
+    
+def choice_checker(response):
+    while(response != 1 or 2):
+        return "invalid"
+    else:
+        return response
+        
+        
+        
+        
+
+def answer(response_two):
+ if(response_two == 1): 
+            return True
+ else:
+            return False
+            
+            
+            
+            
+            
+
+
+def park(slot):
+    parking_lot[slot] = 1
+    
+    
+    
+    
+    
+
+        
+def leave(slot):
+    parking_lot[slot] = 0
+    
+    
+    
+    
+    
+ 
+    
+def available_slots():
+    for i in range(len(parking_lot)):
+        if (parking_lot[i] == 0):
+            print("slot", i ,"Available")
+        else:
+            print("slot", i ,"Occupied")
+            
+            
+            
+            
+            
+            
+            
+def slot_checker(slot):
+    if parking_lot[slot] == 1:
+       return "occupied "
+       
+       
+       
+       
+
+
+    
+def operation():
+    car_owner = input("Owner's name please: ")
+    greeting(car_owner)
+    response = int(input("Do you wish to (1. park)(2. leave): "))
+    choice_checker(response)
+    if (response == 1):
+            available_slots()
+            slot = int(input("Pick a slot: "))
+            choice_checker_two(response)
+            slot_checker(slot)
+            park(slot)
+    if (response == 2):
+            slot = int(input("Enter your car's slot: "))
+            choice_checker_two(response)
+            if (parking_lot[slot] == 0):
+                print("bruh you aint got no car")
+            if (parking_lot[slot] == 1):
+                leave(slot)
+    response_two = int(input("Do you wish to (1. new visitor)(2. end session): "))
+    answer(response_two)
+    
+    
+    
+    
+    
+
+
+
+def main():
+    if(True):
+        operation()
+            
+   
+   
+   
+     
+main() 
+    
+    
+
