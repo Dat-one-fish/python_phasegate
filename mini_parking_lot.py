@@ -33,7 +33,7 @@ def choice_checker(response):
 def answer(response_two):
  if(response_two == 1): 
             return True
- else:
+ els:
             return False
             
             
@@ -102,7 +102,7 @@ def operation():
             if (parking_lot[slot] == 1):
                 leave(slot)
     response_two = int(input("Do you wish to (1. new visitor)(2. end session): "))
-    answer(response_two)
+    answer(response_two)S
     
     
     
